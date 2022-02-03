@@ -24,17 +24,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void convert(View v) {
-        int usd_val = Integer.parseInt(usv.getText().toString());
-        int ll_val = Integer.parseInt(llv.getText().toString());
-        int newl = ll_val / 22000;
-        int newu = usd_val * 22000;
-        if (TextUtils.isEmpty(usv.getText().toString())) {
-            Toast.makeText(getApplicationContext(), newl, Toast.LENGTH_LONG).show();
+
+        String usd_val = usv.getText().toString();
+        String ll_val = llv.getText().toString();
+        if (usd_val.isEmpty()) {
+            double newl = Double.parseDouble(ll_val) / 22000;
+            Toast.makeText(getApplicationContext(), String.valueOf(newl) + "$", Toast.LENGTH_LONG).show();
         }
 
-        if (TextUtils.isEmpty(llv.getText().toString())) {
-            Toast.makeText(getApplicationContext(), newu, Toast.LENGTH_LONG).show();
+        if (ll_val.isEmpty()) {
+            double newu = Double.parseDouble(usd_val) * 22000;
+            Toast.makeText(getApplicationContext(), String.valueOf(newu) + "LL", Toast.LENGTH_LONG).show();
         }
+
+
     }
 
 

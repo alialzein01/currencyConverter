@@ -13,8 +13,8 @@
         android:layout_height="54dp"
         android:background="#A39B56"
         android:ems="10"
+        android:hint="LL Value"
         android:inputType="textPersonName"
-        android:text="LL Value"
         android:textAlignment="center"
         android:textColor="#EDE5E5"
         app:layout_constraintBottom_toTopOf="@+id/convert"
@@ -22,39 +22,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/usdValue" />
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="227dp"
-        android:layout_height="53dp"
+    <TextView
+        android:id="@+id/rateTxt"
+        android:layout_width="215dp"
+        android:layout_height="48dp"
         android:background="#A39B56"
         android:ems="10"
         android:inputType="number"
         android:text="Rate: 22,000 LL / USD"
         android:textAlignment="center"
-        android:textColor="#EFE9E9"
+        android:textColor="#E3E6EC"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Currency Converter"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#EDE6E6"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNumber"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.495" />
+        app:layout_constraintVertical_bias="0.249"
+        tools:ignore="TextContrastCheck" />
 
     <Button
         android:id="@+id/convert"
@@ -72,10 +57,11 @@
         android:id="@+id/imageView2"
         android:layout_width="105dp"
         android:layout_height="134dp"
-        android:layout_marginTop="464dp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:srcCompat="@drawable/png_transparent_dollar_sign_united_states_dollar_currency_symbol_e_currency_text_trademark_logo_thumbnail"
-        tools:layout_editor_absoluteX="290dp" />
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="78dp"
+        app:layout_constraintStart_toEndOf="@+id/convert"
+        app:layout_constraintTop_toBottomOf="@+id/llValue"
+        app:srcCompat="@drawable/png_transparent_dollar_sign_united_states_dollar_currency_symbol_e_currency_text_trademark_logo_thumbnail" />
 
     <EditText
         android:id="@+id/usdValue"
@@ -84,12 +70,24 @@
         android:background="#A39B56"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="USD Value"
+        android:hint="USD Value"
         android:textAlignment="center"
         android:textColor="#EDE5E5"
         app:layout_constraintBottom_toTopOf="@+id/llValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+        app:layout_constraintTop_toBottomOf="@+id/rateTxt" />
+
+    <TextView
+        android:id="@+id/titleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="56dp"
+        android:text="Currency Converter"
+        android:textColor="#F6F2F2"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
