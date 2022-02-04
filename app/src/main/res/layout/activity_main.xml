@@ -16,7 +16,7 @@
         android:hint="LL Value"
         android:inputType="number"
         android:textAlignment="center"
-        android:textColor="#EDE5E5"
+        android:textColor="#121010"
         app:layout_constraintBottom_toTopOf="@+id/convert"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:inputType="number"
         android:text="Rate: 22,000 LL / USD"
         android:textAlignment="center"
-        android:textColor="#E3E6EC"
+        android:textColor="#101112"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,13 +45,15 @@
         android:id="@+id/convert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/teal_200"
         android:onClick="convert"
         android:text="Convert"
+        android:textColor="#D7D5DF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/llValue" />
+        app:layout_constraintTop_toBottomOf="@+id/llValue"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -69,14 +71,15 @@
         android:layout_height="54dp"
         android:background="#A39B56"
         android:ems="10"
-        android:inputType="numberDecimal"
         android:hint="USD Value"
+        android:inputType="numberDecimal"
         android:textAlignment="center"
-        android:textColor="#EDE5E5"
+        android:textColor="#121010"
         app:layout_constraintBottom_toTopOf="@+id/llValue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rateTxt" />
+        app:layout_constraintTop_toBottomOf="@+id/rateTxt"
+        app:layout_constraintVertical_bias="0.51" />
 
     <TextView
         android:id="@+id/titleTxt"

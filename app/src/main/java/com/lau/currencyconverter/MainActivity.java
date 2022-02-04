@@ -35,12 +35,18 @@ public class MainActivity extends AppCompatActivity {
         String usd_val = usv.getText().toString();
         String ll_val = llv.getText().toString();
         closeKeyboard();
-        if (usd_val.isEmpty()) {
-            double newl = Double.parseDouble(ll_val) / 22000;
-            Toast.makeText(getApplicationContext(), formatNum(String.valueOf(newl)) + "$", Toast.LENGTH_LONG).show();
-        } else if (ll_val.isEmpty()) {
-            double newu = Double.parseDouble(usd_val) * 22000;
-            Toast.makeText(getApplicationContext(), formatNum(String.valueOf(newu)) + "LL", Toast.LENGTH_LONG).show();
+        if (usd_val.isEmpty() && ll_val.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please enter a valid value", Toast.LENGTH_LONG).show();
+        } else if (!usd_val.isEmpty() && !ll_val.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Please fill only one box", Toast.LENGTH_LONG).show();
+        } else {
+            if (usd_val.isEmpty()) {
+                double newl = Double.parseDouble(ll_val) / 22000;
+                Toast.makeText(getApplicationContext(), formatNum(String.valueOf(newl)) + " $", Toast.LENGTH_LONG).show();
+            } else if (ll_val.isEmpty()) {
+                double newu = Double.parseDouble(usd_val) * 22000;
+                Toast.makeText(getApplicationContext(), formatNum(String.valueOf(newu)) + " LL", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
