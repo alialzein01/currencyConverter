@@ -23,12 +23,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         usv = (EditText) findViewById(R.id.usdValue);
         llv = (EditText) findViewById(R.id.llValue);
-
         conv = findViewById(R.id.convert);
-
     }
 
     public void convert(View v) {
